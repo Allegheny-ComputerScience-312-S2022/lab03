@@ -1,0 +1,34 @@
+---
+name: cmpsc-312-Spring-2022-lab1
+break: true
+indent: 4
+---
+
+# --> check the technical writing
+writing/queries.md:
+    ConfirmFileExists
+    MatchFileFragment --fragment "Add Your Name Here" --count 0 --exact
+    MatchFileFragment --fragment "Add Your Account Name Here" --count 0 --exact
+    MatchFileFragment --fragment "TODO" --count 0 --exact
+
+src/proteinDB2_build.txt:
+    ConfirmFileExists
+    MatchFileFragment --fragment "Add Your Name Here" --count 0 --exact
+    MatchFileFragment --fragment "Add Your Account Name Here" --count 0 --exact
+    MatchFileFragment --fragment "TODO" --count 0 --exact
+
+src/data/uniprot_n_protein.tab:
+    ConfirmFileExists
+
+src/data/uniprot_s_protein.tab:
+    ConfirmFileExists
+
+src/data/uniprot_sars_protein.tab:
+    ConfirmFileExists
+
+src/data/uniprot_m_protein.tab:
+    ConfirmFileExists
+
+
+# --> check the number of commits beyond a threshold
+CountCommits --count 3
